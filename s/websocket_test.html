@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href=""/>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<p><span>长连接地址：</span><input type="text" id="ccc" style="height:30px;width:500px;"/></p>
+<p><button type="button" id="aa">开启长连接</button></p>
+<script>
+var $aa = $("#aa");
+$aa.on("click",function(){
+	var ccc = $("#ccc").val();
+	if(ccc.length>0){
+		alert('长连接地址为：'+ccc);
+		var url = ccc;//'ws://192.168.118.171:9020/testp?p=aaa';
+		alert('开始建立长连接')
+		var socket = new WebSocket(url);
+
+		socket.onerror = function () { // 如果长连接建立失败，重新建立
+			alert('长连接关闭')
+			console.log('websocket连接失败');
+		};
+
+		// 打开Socket
+		socket.onopen = function (response) {
+			alert('建立长连接成功')
+			console.log('websocket 建立成功')
+			// 监听消息
+			socket.onmessage = function (response) {
+				alert('接收消息成功')
+				console.log(response);
+
+			};
+
+			// 监听Socket的关闭
+			socket.onclose = function (event) {
+			alert('长连接关闭')
+				console.log("websocket被关闭");
+			};
+		};
+
+	}else{
+		alert('长连接地址不能为空')
+	}
+});
+
+    
+</script>
+</body>
+</html>
