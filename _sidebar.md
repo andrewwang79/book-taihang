@@ -1,12 +1,10 @@
 * [介绍](README.md)
 * [功能](fn.md)
-
 * 规范
   * [API规范](spec/api.md)
   * [安全模型](spec/safe_module.md)
   * [异常处理](spec/exception.md)
   * [其他规约](spec/misc.md)
-
 * 使用手册
   * [开始](manual/start.md)
   * [基础服务](manual/base/SUMMARY.md)
@@ -40,7 +38,6 @@
       * [广告-应用的一部分](manual/biz/adv.md)
       * [渠道对接](dev/module/channel.md)
       * [业务运营自动化](dev/module/auto_operation.md)
-
 * 方案设计
   * [系统设计](design/sln.md)
   * [通用结构](design/base.md)
@@ -57,32 +54,6 @@
   * [系统](design/sys/SUMMARY.md)
       * [移动端系统](design/sys/mobile.md)
       * [SAAS系统](design/sys/saas.md)
-
-* 行业业务方案
-  * [ERP](https://erp.wangyaqi.cn)
-  * [零售](https://retail.wangyaqi.cn)
-  * [卡系统](sln/card/card.md)
-  * [会员系统](sln/customer/SUMMARY.md)
-      * [设计](sln/customer/design.md)
-      * [数据库](sln/customer/db.md)
-  * [金融系统](sln/finance/SUMMARY.md)
-      * [交易](sln/finance/trade.md)
-      * [结算](sln/finance/settlement.md)
-      * [风控](sln/finance/risk.md)
-      * [资金管理](sln/finance/fund.md)
-      * [数据库](sln/finance/db.md)
-  * [财务系统](sln/accounting/SUMMARY.md)
-      * [设计](sln/accounting/design.md)
-      * [数据库](sln/accounting/db.md)
-  * [医疗健康](sln/health/SUMMARY.md)
-      * [医疗知识](sln/health/kb.md)
-  * [服务平台](sln/serv/SUMMARY.md)
-      * [设计](sln/serv/design.md)
-      * [数据库](sln/serv/db.md)
-  * [站点物流服务](sln/site_logistics/SUMMARY.md)
-      * [设计](sln/site_logistics/design.md)
-      * [数据库](sln/site_logistics/db.md)
-
 * 运维
   * [产品发布](ops/publish.md)
   * [产品服务端部署](ops/deploy.md)
@@ -90,7 +61,6 @@
   * [日志](ops/log.md)
   * [监控](ops/monitor.md)
   * [功能逐级发布](ops/gatekeeper.md)
-
 * 资料
   * [技术](material/tech/SUMMARY.md)
       * [大家](material/tech/famous.md)
