@@ -38,7 +38,7 @@
       * [广告-应用的一部分](manual/biz/adv.md)
       * [渠道对接](dev/module/channel.md)
       * [业务运营自动化](dev/module/auto_operation.md)
-* 方案设计
+* 方案
   * [系统设计](design/sln.md)
   * [通用结构](design/base.md)
   * [基础服务](design/base/SUMMARY.md)
@@ -54,6 +54,7 @@
   * [系统](design/sys/SUMMARY.md)
       * [移动端系统](design/sys/mobile.md)
       * [SAAS系统](design/sys/saas.md)
+  * [系统平台化](design/platform.md)
 * 运维
   * [产品发布](ops/publish.md)
   * [产品服务端部署](ops/deploy.md)
