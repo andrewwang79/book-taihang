@@ -66,6 +66,7 @@
   * [技术](material/tech/SUMMARY.md)
       * [大家](material/tech/famous.md)
       * [OSS(存储服务)](material/tech/oss.md)
+      * [第三方服务](material/tech/third.md)
   * [测试](material/test/SUMMARY.md)
       * [测试和用例](material/test/intro.md)
       * [单元测试](material/test/UT.md)
