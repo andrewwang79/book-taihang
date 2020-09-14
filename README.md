@@ -72,9 +72,7 @@
 # 资料
 1. [大数据](https://andrewwang79.gitbooks.io/javadev/cloud/SUMMARY.html#%E5%A4%A7%E6%95%B0%E6%8D%AE)
 1. [版本发布模型](http://wangyaqi.cn/2015/05/18/git/)
-1. [API文档swagger](http://ljapi.swao.cn/swagger-ui.html)
-1. [快速配置开发的管理系统](http://lja.swao.cn/#/search/pageUI)(18702693501/123456)
-1. [maven仓库](http://mvn.swao.cn/nexus/)
+1. [](http://lja.swao.cn/#/search/pageUI)(18702693501/123456)
 1. [版本定义规范](https://semver.org/lang/zh-CN/)
 1. [理解OAuth 2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
 1. [WebAPI安全](http://www.cnblogs.com/developersupport/p/WebAPI-Security.html#authentication-authorization)
