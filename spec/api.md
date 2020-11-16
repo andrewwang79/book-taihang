@@ -6,7 +6,7 @@
 ## 接口规范
 
 | 请求类型 | HTTP | 参数格式 | 实例 |
-| :----: | ---- | ---- |
+| :----: | ---- | ---- | ---- |
 | 查询 | GET/POST | MAP(标准请求参数 + 业务数据) | http://api.x.com/fn?token=1234567890&userid=111 |
 | [提交](#提交接口设计) | POST | MAP(标准请求参数)+JSON(业务数据) | http://api.x.com/fn?token=1234567890, body: {} |
 
@@ -23,7 +23,7 @@
 
 | 参数 | 名称 | 说明 | 必须 |
 | :----: | ---- | ---- | ---- |
-| [code](exception.html#返回码) | 返回码 |  | Y |
+| [code](exception#返回码) | 返回码 |  | Y |
 | sign | 签名 |  | Y |
 | data | 结果 | json对象，成功返回业务数据，PARAM_ERROR时返回错误PARAM清单 | Y |
 | msg | 信息 | 英文，只用于开发人员 | N |

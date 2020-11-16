@@ -1,6 +1,7 @@
 * [介绍](README.md)
 * [功能](fn.md)
 * [基于微服务的下一代架构规划](ng/SUMMARY.md)
+  * [API规范](ng/api/SUMMARY.md)
   * 权限服务
     * [权限服务-需求](ng/service/authority/req.md)
     * [权限服务-设计](ng/service/authority/design.md)
@@ -45,6 +46,7 @@
       * [业务运营自动化](dev/module/auto_operation.md)
 * 方案设计
   * [系统设计](design/sln.md)
+    * [验证码](design/captcha.md)
   * [通用结构](design/base.md)
   * [基础服务](design/base/SUMMARY.md)
       * [存储服务](design/base/storage.md)
@@ -69,4 +71,5 @@
   * [功能逐级发布](ops/gatekeeper.md)
 * 资料
   * [第三方服务](material/third.md)
+  * [代码质量](material/coding_quality.md)
   * [工具](material/tool.md)
