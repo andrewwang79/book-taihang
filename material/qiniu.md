@@ -21,6 +21,3 @@ http://ljapi.swao.cn/qiniu/file/refresh
   "dirs": ["https://s.swao.cn/ttt"] // 可选，路径网址最多10个
 }
 ```
-
-## 资料
-* [Postman使用](http://blog.csdn.net/u013613428/article/details/51577209)

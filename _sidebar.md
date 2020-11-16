@@ -1,5 +1,10 @@
 * [介绍](README.md)
 * [功能](fn.md)
+* [基于微服务的下一代架构规划](ng/SUMMARY.md)
+  * 权限服务
+    * [权限服务-需求](ng/service/authority/req.md)
+    * [权限服务-设计](ng/service/authority/design.md)
+    * [权限服务-表结构](ng/service/authority/table.md)
 * 规范
   * [API规范](spec/api.md)
   * [安全模型](spec/safe_module.md)
@@ -38,7 +43,7 @@
       * [广告-应用的一部分](manual/biz/adv.md)
       * [渠道对接](dev/module/channel.md)
       * [业务运营自动化](dev/module/auto_operation.md)
-* 方案
+* 方案设计
   * [系统设计](design/sln.md)
   * [通用结构](design/base.md)
   * [基础服务](design/base/SUMMARY.md)
@@ -63,13 +68,5 @@
   * [监控](ops/monitor.md)
   * [功能逐级发布](ops/gatekeeper.md)
 * 资料
-  * [技术](material/tech/SUMMARY.md)
-      * [大家](material/tech/famous.md)
-      * [OSS(存储服务)](material/tech/oss.md)
-      * [第三方服务](material/tech/third.md)
-      * [版本环境发布](material/tech/version.md)
-      * [网络知识](material/tech//net.md)
-  * [参考](material/ref/SUMMARY.md)
-      * [模板](material/ref/template.md)
-      * [术语中英文](material/ref/term.md)
-      * [中国行政结构](material/ref/china.md)
+  * [第三方服务](material/third.md)
+  * [工具](material/tool.md)
