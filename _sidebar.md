@@ -1,7 +1,7 @@
 * [介绍](README.md)
 * [功能](fn.md)
 * 基于微服务的下一代架构规划
-* [规划](ng/SUMMARY.md)
+  * [规划](ng/SUMMARY.md)
   * [API规范](ng/api/SUMMARY.md)
   * 权限服务
     * [权限服务-需求](ng/service/authority/req.md)
