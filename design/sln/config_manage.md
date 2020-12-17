@@ -25,10 +25,3 @@
 | :-: | - |
 | 配置项 | 安装，初始化 |
 | 数据 | 初始化 |
-
-## 资料
-* [spring cloud集成nacos配置中心](https://juejin.im/post/6844903783684653064)
-* [主流微服务配置中心对比](https://www.javazhiyin.com/33919.html)
-* [使用 zk与 springboot 搭建配置中心](https://www.jianshu.com/p/9b805dfc2a7b)
-* [Zookeeper笔记之基于zk的分布式配置中心](https://www.cnblogs.com/cc11001100/p/10230608.html)
-* [Zookeeper的集群配置和Java测试程序](https://blog.csdn.net/catoop/article/details/50848555)

@@ -1,16 +1,16 @@
 * [介绍](README.md)
 * [功能](fn.md)
-* [基于微服务的下一代架构规划](ng/SUMMARY.md)
+* 基于微服务的下一代架构规划
+* [规划](ng/SUMMARY.md)
   * [API规范](ng/api/SUMMARY.md)
   * 权限服务
     * [权限服务-需求](ng/service/authority/req.md)
     * [权限服务-设计](ng/service/authority/design.md)
     * [权限服务-表结构](ng/service/authority/table.md)
 * 规范
+  * [开发规约](spec/dev.md)
   * [API规范](spec/api.md)
-  * [安全模型](spec/safe_module.md)
   * [异常处理](spec/exception.md)
-  * [其他规约](spec/misc.md)
 * 使用手册
   * [开始](manual/start.md)
   * [基础服务](manual/base/SUMMARY.md)
@@ -30,7 +30,7 @@
       * [兼容](arch/compatibility.md)
       * [事件处理](arch/event.md)
       * [业务注入](arch/biz-inject.md)
-      * [安全机制](dev/spec/safe.md)
+      * [安全机制](arch/safe.md)
       * [常用功能](manual/base/misc.md)
   * [公共服务-通用](manual/biz/SUMMARY.md)
       * [支付](manual/biz/pay.md)

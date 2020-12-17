@@ -1,4 +1,5 @@
 # 基于微服务的架构
+![](https://tech.wangyaqi.cn/s/distarch/arch.jpg)
 
 # 目标
 1. 适用于中大型产品开发
@@ -55,5 +56,5 @@
 * 服务的可视化管理，如redis
 
 ## 资料
-* [架构](https://tech.wangyaqi.cn/#/arch/)
+* [架构设计](https://tech.wangyaqi.cn/#/distarch/SUMMARY)
 * [表参考](https://github.com/shuzheng/zheng/blob/master/project-datamodel/zheng.png)
