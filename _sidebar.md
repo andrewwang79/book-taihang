@@ -64,7 +64,6 @@
   * [产品运维](ops/ops.md)
   * [日志](ops/log.md)
   * [监控](ops/monitor.md)
-  * [功能逐级发布](ops/gatekeeper.md)
 * 资料
   * [第三方服务](material/third.md)
   * [工具](material/tool.md)
