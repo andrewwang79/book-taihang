@@ -4,22 +4,23 @@
 ### 架构
 | 层级 | package | 说明 |
 | :----: | -- | -- |
-| API层 | controller | 对外提供API服务。可以调用manager和service |
-| 业务逻辑层 | manager | 可以调用service |
-| 服务层 | service | 接入数据和外部服务 |
+| 展示层 | / | 前端 |
+| 接口层 | controller | 对外提供API服务。调用manager和service |
+| 业务层 | manager | 业务逻辑，调用service |
+| 服务层 | service | 数据逻辑和外部服务，调用数据层(UserService)和外部服务(SmsService) |
+| 数据层 | dao | mapper是MyBatis，repository是JPA |
 
 ### 项目
 ```
-API项目
-  controller
-
-middletier项目
-  manager
-  service
-    UserService : 数据
-    SmsService : 外部服务
-  dao : mapper是MyBatis，repository是JPA
-  entity
+frontend
+server
+  项目API
+    controller
+  项目middletier
+    manager
+    service
+    dao
+    entity
 ```
 
 ### 文件
@@ -43,11 +44,13 @@ middletier项目
   1. CRUD
 
 #### 对象
+* 推荐方案：后端无VO，接口层用DTO；VO用于前端
 
-## 注册方式
-| 字段 | 对应 | 说明 |
-| :-: | - | - |
-| DO/PO/entity | 单表 |  |
-| VO | 多表视图 | 多表查询 |
-| DTO | 数据传输对象 | 如API的输入输出，有输入输出两个对象 |
-| BO | 业务对象 | 内部使用。有时候直接作为输出DTO |
+| 名词 | 名称 | 对应层 | 对应对象 | 说明 |
+| :-: | - | - | - | - |
+| VO | 视图对象(View Object) | 展示层 | 页面/组件的数据封装 | 接口层数据的二次加工 |
+| DTO | 数据传输对象(Data Transfer Object) | 所有层 | 层与层之间的数据传输 | 接口层有输入DTO和输出DTO |
+| BO | 业务对象(Biz Object) | 业务层 | 业务层对象 | 内部使用。少部分情况下结构接口层DTO |
+| ENTITY | 实体 | 数据层 | 数据库表 |  |
+| PO | 持久化对象(Persistent Object) | 数据层 | 数据库表 |  |
+| DM | 领域模型(Domain Model) | 数据层 | 数据库表 |  |
