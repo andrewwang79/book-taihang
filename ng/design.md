@@ -45,6 +45,7 @@ server
 
 #### 对象
 * 推荐方案：后端无VO，接口层用DTO；VO用于前端
+* http://www.tnblog.net/aojiancc2/article/details/2396
 
 | 名词 | 名称 | 对应层 | 对应对象 | 说明 |
 | :-: | - | - | - | - |
