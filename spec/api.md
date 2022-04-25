@@ -7,33 +7,55 @@
 
 | 请求类型 | HTTP | 参数格式 | 实例 |
 | :----: | ---- | ---- | ---- |
-| 查询 | GET/POST | MAP(标准请求参数 + 业务数据) | http://api.x.com/fn?token=1234567890&userid=111 |
-| [提交](#提交接口设计) | POST | MAP(标准请求参数)+JSON(业务数据) | http://api.x.com/fn?token=1234567890, body: {} |
+| 查询 | POST | MAP(标准请求参数 + 业务数据) | https://api.x.com/fn?token=1234567890&userid=111 |
+| [提交](#提交接口设计) | POST | MAP(标准请求参数)+JSON(业务数据) | https://api.x.com/fn?token=1234567890, body: {} |
 
 ## 标准请求参数
-
+* 报文请求头字段
 | 参数 | 名称 | 说明 |
 | :----: | ---- | ---- |
-| appid | 应用号 |  |
-| sign | 签名 | 获取appid时同时验证 |
+| sign | 签名 |  |
 | token | 用户令牌 | 登录后才有 |
-| [client](#终端信息结构) | 终端信息 | 如是第三方后端直接调用时允许为空 |
+| [client](#请求方信息结构) | 请求方信息结构 |  |
+
+* 业务字段
+| 参数 | 名称 | 说明 |
+| :----: | ---- | ---- |
+| requestId | 请求号 |  |
+| method | 函数 |  |
+| ver | 版本 |  |
+
+### GET模式
+```
+curl -X GET 'https://api.x.com/fn?requestId=135213&&ver=1.0'
+```
+
+### POST模式
+```
+curl -H "Content-type: application/json" -X POST -d '{"requestId":135213, "method":"fn", "ver":"1.0"}' 'https://api.x.com/'
+```
 
 ## 标准返回参数
 
 | 参数 | 名称 | 说明 | 必须 |
 | :----: | ---- | ---- | ---- |
-| [code](exception#返回码) | 返回码 |  | Y |
+| requestId | 请求号 |  | Y |
+| beginTime | 开始时间 | 时间戳 | Y |
+| endTime | 结束时间 | 时间戳 | Y |
 | sign | 签名 |  | Y |
+| [code](exception#返回码) | 返回码 |  | Y |
 | data | 结果 | json对象，成功返回业务数据，PARAM_ERROR时返回错误PARAM清单 | Y |
-| msg | 信息 | 英文，只用于开发人员 | N |
-| verbose | 异常信息(堆栈) |  | 失败特有。(非生产环境 或者 (生产环境 并且 未知错误)) |
+| verbose | 异常信息(堆栈) | 异常特有 | (非生产环境 OR (生产环境 AND 未知错误)) |
+
+```
+{"requestId":135213, "beginTime":1650868552, "endTime":1650868552, "code":0, "data":{"result":1}}
+```
 
 # 参考
 ## 方法格式
 格式：entity/operation，如user/get
 
-## 终端信息结构
+## 请求方信息结构
 * 结构：系统-设备-设备号-运行环境容器-版本
 * 示例：taihang/taihang_boss-iOS-UUID-MobileBrowser-2.8.20.1495017
 * 枚举
