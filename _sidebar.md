@@ -3,9 +3,6 @@
 * 基于微服务的下一代架构规划
   * [规划](ng/SUMMARY.md)
   * [系统设计](ng/design.md)
-  * [API规范](ng/api/SUMMARY.md)
-    * [API规范-返回码](ng/api/code.md)
-    * [API规范-示例](ng/api/example.md)
   * 权限服务
     * [权限服务-需求](ng/service/authority/req.md)
     * [权限服务-设计](ng/service/authority/design.md)
