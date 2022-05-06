@@ -6,20 +6,11 @@
 * 行业业务方案
 * 周边技术：前端 + 运维 + 测试
 
-## 解决
-1. 提升开发效率
-1. 提升产品质量
-1. 提升问题定位和解决能力
-1. 降低维护成本
-
 ## 准则
-1. 渐进式架构设计，具有快速迭代能力。解决需求和痛点
-1. 分布式架构，可扩展性，模块化组件
 1. 全API开发模式
 1. [管理系统的快速配置开发](https://qiya365.gitbooks.io/longgang/)，通过配置和自定义页面快速开发
 1. 自动化运维，生产问题可提前/快速发现和解决
 1. 服务容器化，如docker
-1. 不做轮子(这世界轮子太多了)，做粘合剂整合轮子：整合方案 + 轮子使用的封装 + 小工具。
 1. 提供行业业务方案
 
 ## 目标
@@ -70,14 +61,15 @@
 * Open-Falcon
 
 # 资料
+1. [架构知识](https://tech.wangyaqi.cn/#/common/arch)
 1. [大数据](https://andrewwang79.gitbooks.io/javadev/cloud/SUMMARY.html#%E5%A4%A7%E6%95%B0%E6%8D%AE)
-1. [版本发布模型](http://wangyaqi.cn/2015/05/18/git/)
-1. [](http://lja.swao.cn/#/search/pageUI)(18702693501/123456)
 1. [版本定义规范](https://semver.org/lang/zh-CN/)
 1. [理解OAuth 2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
 1. [WebAPI安全](http://www.cnblogs.com/developersupport/p/WebAPI-Security.html#authentication-authorization)
 
 ## 快速开发框架
+* [BladeX企业级开发平台](https://bladex.vip/)
+* https://gitee.com/shuzheng/zheng
 * [Dubbo](http://dubbo.io/Developer+Guide-zh.htm)：RPC+ZooKeeper
 * [spring-wind](https://git.oschina.net/juapk/spring-wind)：可参考代码和代码结构。
 * [iBase4J](https://git.oschina.net/iBase4J/iBase4J)：采用了ZooKeeper，分布式服务理念
