@@ -7,10 +7,7 @@
     * [权限服务-需求](ng/service/authority/req.md)
     * [权限服务-设计](ng/service/authority/design.md)
     * [权限服务-表结构](ng/service/authority/table.md)
-* 规范
-  * [开发规约](spec/dev.md)
-  * [API规范](spec/api.md)
-  * [异常处理](spec/exception.md)
+  * OSS服务
 * 使用手册
   * [开始](manual/start.md)
   * [基础服务](manual/base/SUMMARY.md)
