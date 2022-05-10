@@ -11,9 +11,14 @@
       * [设计](ng/framework/service-auth/design.md)
       * [表结构](ng/framework/service-auth/table.md)
     * OSS服务
+      * [功能](ng/framework/service-oss/fn.md)
+      * [使用](ng/framework/service-oss/manual.md)
+      * [设计](ng/framework/service-oss/design.md)
   * 医疗
     * 收图服务
       * [功能](ng/medical/service-broker/fn.md)
+      * [设计](ng/medical/service-broker/design.md)
+      * [接口](ng/medical/service-broker/api.md)
 * 使用手册
   * [开始](manual/start.md)
   * [基础服务](manual/base/SUMMARY.md)
