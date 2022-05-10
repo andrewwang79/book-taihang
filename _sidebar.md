@@ -3,22 +3,24 @@
 * 基于微服务的下一代架构规划
   * [规划](ng/SUMMARY.md)
   * [系统设计](ng/design.md)
-  * 权限服务
-    * [权限服务-需求](ng/service/authority/req.md)
-    * [权限服务-设计](ng/service/authority/design.md)
-    * [权限服务-表结构](ng/service/authority/table.md)
-  * OSS服务
+  * [产品运维](ng/ops.md)
+  * 框架
+    * 权限服务
+      * [功能](ng/framework/service-auth/fn.md)
+      * [使用](ng/framework/service-auth/manual.md)
+      * [设计](ng/framework/service-auth/design.md)
+      * [表结构](ng/framework/service-auth/table.md)
+    * OSS服务
+  * 医疗
+    * 收图服务
+      * [功能](ng/medical/service-broker/fn.md)
 * 使用手册
   * [开始](manual/start.md)
   * [基础服务](manual/base/SUMMARY.md)
       * [锁](manual/base/lock.md)
-      * [存储服务](manual/base/storage.md)
       * [计算](manual/base/calc.md)
       * [事务和并行任务](dev/module/transaction.md)
-      * [操作日志](dev/module/operation_log.md)
       * [excel导入导出](dev/fn/excel.md)
-      * [任务计划](dev/module/schedule.md)
-      * [信息和通知](dev/fn/msg.md)
       * [消息](manual/base/msg.md)
       * [用户账号](manual/base/user.md)
       * [性能](arch/performance.md)
@@ -55,12 +57,3 @@
   * [系统](design/sys/SUMMARY.md)
       * [移动端系统](design/sys/mobile.md)
       * [SAAS系统](design/sys/saas.md)
-* 运维
-  * [产品发布](ops/publish.md)
-  * [产品服务端部署](ops/deploy.md)
-  * [产品运维](ops/ops.md)
-  * [日志](ops/log.md)
-  * [监控](ops/monitor.md)
-* 资料
-  * [第三方服务](material/third.md)
-  * [工具](material/tool.md)
