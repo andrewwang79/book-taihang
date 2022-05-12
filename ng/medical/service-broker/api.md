@@ -3,25 +3,24 @@
 ## 租户信息
 
 ### 查询所有租户(/v1/tenant/search)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 页数 | page | Integer | Y | 从0开始 |
 | 页容量 | pageSize | Integer | Y | 最小是1 |
 
-参数示例：
 ```
 {
 	"page" : 0,
 	"pageSize" : 5
 }
 ```
-输出
+
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 总页数 | totalPages | Integer | Y |  |
 | 总条数 | totalElements | Integer | Y |  |
 | 结果集合 | list | List | Y |  |
@@ -29,6 +28,7 @@
 | -- 租户Code | code | String | Y |  |
 | -- 租户名称 | name | String | Y |  |
 | -- 租户状态 | status | Integer | Y | 1为启用  2为禁用 |
+
 ```  
 {
     "code": 0,
@@ -41,28 +41,10 @@
                 "status": 1
             },
             {
-                "id": 2,
-                "code": "ZW",
-                "name": "钟吾医院",
-                "status": 1
-            },
-            {
                 "id": 3,
-                "code": "CY",
-                "name": "禅城医院",
+                "code": "ZS",
+                "name": "中山医院",
                 "status": 2
-            },
-            {
-                "id": 6,
-                "code": "1009",
-                "name": "恒生医院",
-                "status": 2
-            },
-            {
-                "id": 7,
-                "code": "HE",
-                "name": "淮二医院",
-                "status": 1
             }
         ],
         "totalPages": 1,
@@ -72,24 +54,22 @@
 ```
 
 ### 查询租户详情(/v1/tenant/read)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 租户Id | id | Integer | Y |  |
 
-参数示例:
 ```
 {
     "id": 1
 }
 ```
 
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 租户id | id | Integer | Y |  |
 | 租户Code | code | String | Y |  |
 | 租户名称 | name | String | Y |  |
@@ -112,11 +92,10 @@
 ```
 
 ### 添加租户(/v1/tenant/create)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 租户Code | code | String | Y |  |
 | 租户名称 | name | String | Y |  |
 | 租户电话 | mobile | String | Y |  |
@@ -132,37 +111,38 @@
 	"remark" : ""
 }
 ```
-输出 ：
+
+* 输出
+```
 {
   "code": 0 --成功
   "code": 401 --租户code已存在
 }
+```
 
 
 ### 禁用/启用租户(/v1/tenant/status/update)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 租户Id | id | Integer | Y | |
 | 租户状态 | status | Integer | Y | 1为 启用 2为禁用 |
 
-参数示例:  
 ```
 {
 	"id" : 5,
 	"status" : 2
 }
 ```
-输出 ：无
+
+* 输出 ：无
 
 ### 编辑租户(/v1/tenant/update)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 租户id | id | Integer | Y | 不可修改 |
 | 租户Code | code | String | Y |不可修改 |
 | 租户名称 | name | String | Y |  |
@@ -182,16 +162,14 @@
 }
 ```
 
-输出 ：无
+* 输出 ：无
 
-##系统
-
+## 系统
 ### 根据租户Id查询所有系统(/v1/sys/search)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 租户Id | tenantId | Integer | Y |  |
 | 页数 | page | Integer | Y | 最小值0 |
 | 页容量 | pageSize | Integer | Y | 最小值1 |
@@ -205,10 +183,10 @@
 }
 ```
 
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 总页数 | totalPages | Integer | Y |  |
 | 总条数 | totalElements | Integer | Y |  |
 | 结果集合 | list | List | Y |  |
@@ -216,6 +194,7 @@
 | -- 系统名称 | name | String | Y |  |
 | -- 系统类型 | type | String | Y |  |
 | -- 系统状态 | status | Integer | Y | 1为 启用 2为禁用 |
+
 ```
 {
     "code": 0,
@@ -241,11 +220,10 @@
 ```
 
 ### 查询系统详情(/v1/sys/read)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 系统Id | id | Integer | Y |  |
 
 ```
@@ -254,15 +232,16 @@
 }
 ```
 
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 系统id | id | Integer | Y |  |
 | 系统名称 | name | String | Y |  |
 | 系统类型 | type | String | Y |  |
 | 系统状态 | status | String | Y |  |
 | 租户id | tenantId | Integer | Y |  |
+
 ```
 {
     "code": 0,
@@ -277,11 +256,10 @@
 ```
 
 ### 添加系统(/v1/sys/create)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 系统名称 | name | String | Y |  |
 | 系统类型 | type | String | Y |  |
 | 租户id | tenantId | Integer | Y |  |
@@ -295,18 +273,16 @@
 }
 ```
 
-输出 ：无
+* 输出 ：无
 
 ### 禁用/启用系统(/v1/sys/status/update)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 租户Id | id | Integer | Y | |
 | 租户状态 | status | Integer | Y | 1为 启用 2为禁用 |
 
-参数示例:  
 ```
 {
 	"id" : 1,
@@ -314,14 +290,13 @@
 }
 ```
 
-输出 ：无
+* 输出 ：无
 
 ### 编辑系统(/v1/sys/edit)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 系统id | id | Integer | Y | 不可修改 |
 | 系统名称 | name | String | Y |  |
 | 系统类型 | type | String | Y |  |
@@ -336,16 +311,14 @@
 }
 ```
 
-输出 ：无
+* 输出 ：无
 
 ## 配置信息
-
 ### 查询系统下的配置(/v1/sys/dict/query)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 系统Id | sysId | Integer | Y |  |
 
 ```
@@ -354,10 +327,10 @@
 }
 ```
 
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 返回集合 | list | List | Y |  |
 | -- 系统id | sysId | Integer | Y |  |
 | -- 实例 | name | String | Y |  |
@@ -383,10 +356,10 @@
 ```
 
 ### 删除系统配置信息(/v1/sys/dict/delete)
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 系统Id | sysId | String | Y |  |
 | 类型 | type | String | Y |  |
 
@@ -397,15 +370,14 @@
 }
 ```
 
-输出：无
+* 输出：无
 
 
 ### 添加配置信息(/v1/sys/dict/create)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 配置集合 | createDtoInfoList | List | Y |  |
 | -- 配置key | dictKey | String | Y |  |
 | -- 父节点 key | parentKey | String | Y |  |
@@ -414,7 +386,6 @@
 | -- 备注 | description | String | Y |  |
 | -- 系统Id | sysId | String | Y |  |
 
-参数示例:
 ```
 {
   "createDtoInfoList": [
@@ -598,11 +569,12 @@
 }
 ```
 
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 返回值 | data | boolean | Y | true 修改成功 false 失败 |
+
 ```
 {
     "code": 0,
@@ -611,11 +583,10 @@
 ```
 
 ### 添加配置信息(/v1/sys/dict/update)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 配置集合 | createDtoInfoList | List | Y |  |
 | -- 配置key | dictKey | String | Y |  |
 | -- 父节点 key | parentKey | String | Y |  |
@@ -624,10 +595,10 @@
 | -- 备注 | description | String | Y |  |
 | -- 系统Id | sysId | String | Y |  |
 
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 返回值 | data | boolean | Y | true 修改成功 false 失败 |
 
 ```
@@ -638,13 +609,12 @@
 ```
 
 ### 查询检查信息获取配置的子配置详情的标题头(/v1/sys/dict/data/bar/query)
+* 输入:无
 
-输入:无
-
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 返回值 | dataList | list | Y |  |
 | -- 配置id | id | Integer | Y |  |
 | -- 父节点 key | parentKey | String | Y |  |
@@ -688,18 +658,18 @@
 ```
 
 ### 查询检查信息获取配置的子配置详情(/v1/sys/dict/data/value/query)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 系统Id | sysId | String | N |  |
 | 影像获取类型 | dictKey | String | Y | dcmPull/webservice/currency |
 
-1.输出(dictKey为dcmPull)
+* 输出
+1. dictKey为dcmPull
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 返回值 | dbList | list | Y |  |
 | -- 配置id | id | Integer | Y |  |
 | -- 配置key | dictKey | String | Y |  |
@@ -715,7 +685,6 @@
 | -- 配置类型 | dictType | String | Y |  |
 | -- 备注 | description | String | Y |  |
 
-参数示例:
 ```
 {
     "code": 0,
@@ -822,11 +791,10 @@
 }
 ```
 
-
-2.输出(dictKey为webservice/currency)
+1. dictKey为webservice/currency
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 返回值 | dataList | list | Y |  |
 | -- 配置id | id | Integer | Y |  |
 | -- 配置key | dictKey | String | Y |  |
@@ -835,7 +803,6 @@
 | -- 配置类型 | dictType | String | Y |  |
 | -- 备注 | description | String | Y |  |
 
-参数示例:
 ```
 {
     "code": 0,
@@ -865,13 +832,12 @@
 ```
 
 ### 查询影像信息获取配置的子配置详情的标题头(/v1/sys/dict/dcm/bar/query)
+* 输入:无
 
-输入:无
-
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 返回值 | dataList | list | Y |  |
 | -- 配置id | id | Integer | Y |  |
 | -- 配置key | dictKey | String | Y |  |
@@ -938,25 +904,23 @@
 ```
 
 ### 查询影像信息获取配置下的子配置详情(/v1/sys/dict/dcm/value/query)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 系统Id | sysId | String | N |  |
 | 影像获取类型 | dictKey | String | Y |  |
 
-参数示例:
 ```
 {
 	"dictKey":"dcmPull"
 }
 ```
 
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | DCM相关配置 | dcmTypeInfoList | list | Y |  |
 | DCM连接配置 | connectionInfoList | list | Y |  |
 | DCM move级别配置| levelInfoList | list | Y |  |
@@ -968,7 +932,6 @@
 | -- 配置类型 | dictType | String | Y |  |
 | -- 备注 | description | String | Y |  |
 
-参数示例:
 ```
 {
   "code": 0,
@@ -1067,13 +1030,12 @@
 ```
 
 ### 查询数据库字段值配置的所有类型(/v1/sys/dict/column/bar/query)
+* 输入:无
 
-输入:无
-
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 返回值 | dataList | list | Y |  |
 | -- 配置id | id | Integer | Y |  |
 | -- 配置key | dictKey | String | Y |  |
@@ -1081,6 +1043,7 @@
 | -- 配置value | dictValue | String | Y |  |
 | -- 配置类型 | dictType | String | Y |  |
 | -- 备注 | description | String | Y |  |
+
 ```
 {
   "code": 0,
@@ -1100,25 +1063,23 @@
 ```
 
 ### 查询数据库字段值配置获取配置详情(/v1/sys/dict/column/value/query)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 系统Id | sysId | String | N |  |
 | 影像获取类型 | dictKey | String | Y | |
 
-参数示例:
 ```
 {
 	"dictKey":"tableColumnValue"
 }
 ```
 
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 数据库字段值配置集合 | tableColumnValueList | List | Y |  |
 | 设备类型配置集合 | modalityList | List | Y |  |
 | 检查部位配置集合 | bodyPartList | List | Y |  |
@@ -1132,7 +1093,6 @@
 | -- 备注 | description | String | Y |  |
 | -- 系统Id | sysId | String | Y |  |
 
-参数示例:
 ```
 {
   "code": 0,
@@ -1195,15 +1155,6 @@
         "dictType": "tableColumnValue",
         "sysId": null,
         "description": "CTE"
-      },
-      {
-        "id": 305,
-        "parentKey": "studyCharacteristics",
-        "dictKey": "CTA",
-        "dictValue": null,
-        "dictType": "tableColumnValue",
-        "sysId": null,
-        "description": "CTA"
       }
     ],
     "patientSexList": [
@@ -1215,24 +1166,6 @@
         "dictType": "tableColumnValue",
         "sysId": null,
         "description": "男"
-      },
-      {
-        "id": 295,
-        "parentKey": "patientSex",
-        "dictKey": "F",
-        "dictValue": null,
-        "dictType": "tableColumnValue",
-        "sysId": null,
-        "description": "女"
-      },
-      {
-        "id": 296,
-        "parentKey": "patientSex",
-        "dictKey": "O",
-        "dictValue": null,
-        "dictType": "tableColumnValue",
-        "sysId": null,
-        "description": "其他"
       }
     ]
   }
@@ -1240,13 +1173,12 @@
 ```
 
 ### 查询设备AE的子配置的标题头(/v1/sys/dict/device/bar/query)
+* 输入:无
 
-输入:无
-
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 返回值 | deviceList | list | Y |  |
 | -- 配置id | id | Integer | Y |  |
 | -- 配置key | dictKey | String | Y |  |
@@ -1256,7 +1188,6 @@
 | -- 系统Id | sysId | String | Y |  |
 | -- 备注 | description | String | Y |  |
 
-输出示例
 ```
 {
   "code": 0,
@@ -1277,16 +1208,15 @@
 ```
 
 ### 测试数据库连接信息(/v1/sys/dict/db/connection/check)
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 数据库类型 | dbType | String | Y |  |
 | 数据库链接地址 | dbUrl | String | Y |  |
 | 用户名 | userName | String | Y | |
 | 密码 | password | String | Y | |
 
-参数示例
 ```
 {
 	"dbType":"sqlserver",
@@ -1295,11 +1225,12 @@
 	"password":"crz"
 }
 ```
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 返回值 | data | boolean | Y | true 连接成功 false 失败 |
+
 ```
 {
     "code": 0,
@@ -1308,20 +1239,20 @@
 ```
 
 ### 测试DCM连接信息(/v1/sys/dict/dcm/connection/check)
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | AET | dcmAet | String | Y |  |
 | IP | dcmHost | String | Y |  |
 | 端口 | dcmPort | String | Y | |
 
-
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 返回值 | data | boolean | Y | true 成功 false 失败 |
+
 ```
 {
     "code": 0,
@@ -1330,21 +1261,19 @@
 ```
 
 ##系统设备AET配置
-
-###查看当前系统的设备AE配置详情 (/v1/sys/dicom/device/search)
-
-输入
+###查看当前系统的设备AE配置详情(/v1/sys/dicom/device/search)
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 页数 | page | INTEGER | Y |  |
 | 条数 | pageSize | INTEGER | Y |  |
 | 系统id | sysId | INTEGER | Y | |
 
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 总页数 | totalPages | INTEGER | Y |  |
 | 总条数 | totalElements | INTEGER | Y |  |
 | 设备AE list | list | LIST | Y | |
@@ -1353,7 +1282,6 @@
 | --设备ae | aeTitle | String | Y | |
 | --设备ae描述 | description | String | Y | |
 
-输出示例
 ```
 {
   "code": 0,
@@ -1372,18 +1300,17 @@
 }
 ```
 
-###查看当前系统的某个设备AE详情 (/v1/sys/dicom/device/read)
-
-输入
+### 查看当前系统的某个设备AE详情(/v1/sys/dicom/device/read)
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 设备AE配置自增id | id | INTEGER | Y |  |
 
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 设备AE配置自增id | id | INTEGER | Y |  |
 | 系统id | sysId | INTEGER | Y | |
 | 设备ae | aeTitle | STRING | Y | |
@@ -1401,24 +1328,20 @@
 }
 ```
 
-###删除当前系统的设备AE配置详情 (/v1/sys/dicom/device/delete)
-
-输入
+### 删除当前系统的设备AE配置详情(/v1/sys/dicom/device/delete)
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 设备AE配置自增id | id | INTEGER | Y |  |
 
-输出
+* 输出:无
 
-无
-
-###新增当前系统的设备AE配置详情 (/v1/sys/dicom/device/create)
-
-输入
+### 新增当前系统的设备AE配置详情(/v1/sys/dicom/device/create)
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 系统id | sysId | INTEGER | Y | |
 | 设备ae | aeTitle | String | Y | |
 | 设备ae描述 | description | String | N | |
@@ -1430,7 +1353,6 @@
 | -- 备注 | description | String | Y |  |
 | -- 系统Id | sysId | String | Y |  |
 
-输入示例
 ```
 {
   "sysId": 1,
@@ -1449,7 +1371,7 @@
 }
 ```
 
-输出
+* 输出
 
 ```
 {
@@ -1458,31 +1380,26 @@
 }
 ```
 
-###修改当前系统的设备AE配置详情 (/v1/sys/dicom/device/update)
-
-输入
+### 修改当前系统的设备AE配置详情(/v1/sys/dicom/device/update)
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 自增id | id | INTEGER | Y | |
 | 系统id | sysId | INTEGER | Y | |
 | 设备ae | aeTitle | STRING | Y | |
 | 设备ae描述 | description | STRING | N | |
 
-输出
-
-无
+* 输出:无
 
 ## broker 对接上层产品
 
 ## filter
-
 ### 添加上层产品获取数据条件(/v1/filter/create)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 队列名称 | queueName | String | Y | |
 | 租户Code | tenantCode | String | Y | |
 | 条件 | filter | String | Y | |
@@ -1492,7 +1409,6 @@
 | --序列描述 | seriesDescription | String | N | |
 | --扫描序列名 | protocolName | String | N | |
 
-参数示例:
 ```
 {
   "queueName": "ring_queue",
@@ -1507,18 +1423,16 @@
 }
 ```
 
-输出：无
+* 输出：无
 
 ### 根据队列名称、租户Code 查询产品获取检查信息(/v1/filter/get_by_queueName_tenantCode)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 队列名称 | queueName | String | Y | |
 | 租户Code | tenantCode | String | Y | |
 
-参数示例:
 ```
 {
 	"queueName": "ring_queue",
@@ -1526,10 +1440,10 @@
 }
 ```
 
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | id | id | Integer | Y | |
 | 队列名称 | queueName | String | Y | |
 | 租户Code | tenantCode | String | Y | |
@@ -1539,7 +1453,6 @@
 | 序列描述 | seriesDescription | String | Y | |
 | 扫描序列名 | protocolName | String | Y |
 
-参数示例：
 ```
 {
   "code": 0,
@@ -1557,11 +1470,10 @@
 ```
 
 ### 修改上层产品获取数据条件(/v1/filter/update)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | id | id | Integer | Y | |
 | 队列名称 | queueName | String | N | |
 | 租户Code | tenantCode | String | N | |
@@ -1572,7 +1484,6 @@
 | --序列描述 | seriesDescription | String | N | |
 | --扫描序列名 | protocolName | String | N | |
 
-参数示例:
 ```
 {
   "id": 2,
@@ -1583,24 +1494,21 @@
   }
 }
 ```
-输出: 无
-
+* 输出: 无
 
 ## 上传ZIP/.dcm文件
-
 ### 根据队列名称、租户Code 查询产品获取检查信息(/v1/file//upload)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 租户Code | tenantCode | String | Y | |
 | 操作人 | userName | String | Y | |
 | 文件 | file | MultipartFile[] | N |
 
-输出
+* 输出:无
 
-code码：
+* code码
 
 ```
 80 参数错误
@@ -1608,26 +1516,17 @@ code码：
 903/904/900  统一都是解析失败
 905 dcm文件校验失败
 902 文件为空
-
-```
-
-```
-{
-    "code": 0
-}
 ```
 
 ### 查询上传记录(/v1/file/search)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 租户Code | tenantCode | String | Y |  |
 | 页数 | page | Integer | Y | 从0开始 |
 | 页容量 | pageSize | Integer | Y | 最小是1 |
 
-参数示例：
 ```
 {
 	"page":0,
@@ -1636,10 +1535,10 @@ code码：
 }
 ```
 
-输出
+* 输出
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | 总页数 | totalPages | Integer | Y |  |
 | 总条数 | totalElements | Integer | Y |  |
 | 结果集合 | list | List | Y |  |
@@ -1672,26 +1571,17 @@ code码：
 }
 ```
 
-
 ### 删除上传记录(/v1/file/delete)
-
-输入
+* 输入
 
 | 名称 | 字段 | 类型 | 必须 | 说明 |
-| :----: | -- | -- | -- | -- | -- |
+| :-: | - | - | - | - |
 | ID | id | Integer | Y |  |
 
-参数示例：
 ```
 {
 	"id":11
 }
 ```
 
-输出
-
-```
-{
-  "code": 0
-}
-```
+* 输出：无
