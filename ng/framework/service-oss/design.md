@@ -121,4 +121,4 @@
     1. OSS的返回结果按照Part号码升序排列。
 
 ## 参考
-* [前端接入实例](https://blog.csdn.net/haohao123nana/article/details/54692669)
+* [前端并发分片断点续传](https://blog.csdn.net/haohao123nana/article/details/54692669)
