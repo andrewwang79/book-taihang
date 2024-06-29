@@ -13,7 +13,7 @@
 1. UT测试
 
 ## 软件架构
-![](https://tech.wangyaqi.cn/s/distarch/arch.jpg)
+![](https://sw.wangyaqi.cn/s/distarch/arch.jpg)
 
 ## 模块结构
 
@@ -53,5 +53,5 @@
 * 服务的可视化管理，如redis
 
 ## 资料
-* [架构设计](https://tech.wangyaqi.cn/#/distarch/SUMMARY)
+* [架构设计](https://sw.wangyaqi.cn/#/distarch/SUMMARY)
 * [表参考](https://gitee.com/shuzheng/zheng/raw/master/project-datamodel/zheng.png)

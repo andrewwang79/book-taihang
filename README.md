@@ -61,7 +61,7 @@
 * Open-Falcon
 
 # 资料
-1. [架构知识](https://tech.wangyaqi.cn/#/common/arch)
+1. [架构知识](https://sw.wangyaqi.cn/#/arch/arch)
 1. [大数据](https://andrewwang79.gitbooks.io/javadev/cloud/SUMMARY.html#%E5%A4%A7%E6%95%B0%E6%8D%AE)
 1. [版本定义规范](https://semver.org/lang/zh-CN/)
 1. [理解OAuth 2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
